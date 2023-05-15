@@ -50,7 +50,7 @@ html:focus-within {
 body {
   min-height: 100vh;
   text-rendering: optimizeSpeed;
-  line-height: 1.5;
+  line-height: 1.3;
 }
 
 /* A elements that don't have a class get default styles */
@@ -92,10 +92,72 @@ select {
 
 /* GLOBAL STYLES */
 
+body {
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    font-family: var(--ff--main);
+    font-weight: var(--fw-base);
+    background-color: var(--clr-primary-200);
+}
+
+/* LAYOUT STYLES */
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.card {
+    max-width: 20rem;
+    background-color: #ffffff;
+    padding: 1rem;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.qr__card {  
+    max-width: 18rem;
+    max-height: 18rem;
+    margin: auto   
+}
 
 
+/* UTILITY */
 
+.sr__only {
+    position: absolute;
+    width: 0.063rem;
+    height: 0.063rem;
+    padding: 0;
+    margin: -0.063rem;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
 
+  .qr__card img {
+    border-radius: 1rem;
+  }
+
+  .card__title {
+    font-size: 1.375rem;
+    text-align: center;
+    color: var(--clr-primary-700);
+    padding: 1rem;
+    line-height: 1.2;
+  }
+
+  .card__description {
+    text-align: center;
+    font-size: var(--fs--base);
+    color: var(--clr-primary-400);
+    padding: 0 1rem 1rem 1rem;
+  }
 
 /* FEM ATTRIB */
 
